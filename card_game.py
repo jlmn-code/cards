@@ -1,5 +1,4 @@
 
-from pandas.io.clipboard import paste
 import random
 import pandas as pd
 import numpy as np
@@ -102,3 +101,4 @@ result = pd.concat([select_player_1, select_player_2], axis=0)
     .fmt_image(columns = 'img', height = 35)
 
 )
+
