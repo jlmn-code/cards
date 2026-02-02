@@ -1,3 +1,3 @@
 # cards
 
-Study package *random* from *numpy** and create a card game
+Study package *random* from *numpy* and create a card game
