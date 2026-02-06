@@ -107,7 +107,7 @@ for i in range(n):
     if 'died' in select_player_2['status'].values:
         break
 
-    ########### attack 1 mazo 2
+########### attack 1 mazo 2
     select_player_1['shield'] = (select_player_1['shield'].values - 
                                 select_player_2['power'].values)
 
@@ -123,7 +123,7 @@ for i in range(n):
     if 'died' in select_player_1['status'].values:
         break
 
-
+################# game history
 game_history = pd.concat(game_history, ignore_index=True)
 
 (
@@ -132,33 +132,6 @@ game_history = pd.concat(game_history, ignore_index=True)
     geom_line() +
     geom_point() 
 )
-
-
-# n = 50
-# for i in range(n):
-    ############ attack 1 mazo 1
-#    select_player_2['shield'] = (select_player_2['shield'].values - 
-#                                select_player_1['power'].values)
-#    select_player_2 = select_player_2.assign(status=lambda x: np.where(x['shield'] > 0, 
-#                                                    'life', 'died'))
-#    select_player_2['attack'] = i
-    
-#    if 'died' in select_player_2['status'].values:
-#        break
-
-    ########### attack 1 mazo 2
-#    select_player_1['shield'] = (select_player_1['shield'].values - 
-#                                select_player_2['power'].values)
-#
-#    select_player_1 = select_player_1.assign(status=lambda x: np.where(x['shield'] > 0, 
-#                                                    'life', 'died'))
-#
-#    select_player_1['attack'] = i
-#
-#    if 'died' in select_player_1['status'].values:
-#        break
-
-
 
 
 ########## result game
@@ -173,3 +146,4 @@ result = pd.concat([select_player_1, select_player_2], axis=0)
     .fmt_image(columns = 'img', height = 35)
 
 )
+
