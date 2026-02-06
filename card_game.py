@@ -3,6 +3,7 @@ import random
 import pandas as pd
 import numpy as np
 from great_tables import GT
+from plotnine import *
 pd.set_option('display.max_columns', None)
 
 ################ create mazo 1
@@ -127,9 +128,9 @@ game_history = pd.concat(game_history, ignore_index=True)
 
 (
     ggplot(game_history.dropna(), 
-                aes(x='attack', y='shield', color='img')) +
-    geom_col() +
-    geom_point()
+                aes(x='attack', y='shield', color='player')) +
+    geom_line() +
+    geom_point() 
 )
 
 
